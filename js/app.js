@@ -11,9 +11,9 @@ const btn = document.getElementById("btn");
 const emailCard = document.getElementById("main-container");
 
 btn.addEventListener("click", function () {
+  emailCard.innerHTML = "";
   const col = document.createElement("div");
   col.classList.add("col-4", "mt-5");
-  
 
   for (let i = 0; i < 10; i++) {
     fetch(url)
@@ -32,3 +32,4 @@ btn.addEventListener("click", function () {
   }
   emailCard.appendChild(col);
 });
+
